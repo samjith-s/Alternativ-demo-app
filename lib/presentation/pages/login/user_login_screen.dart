@@ -41,12 +41,12 @@ class UserLoginScreen extends StatelessWidget {
                       text: 'Sign In',
                     ),
                     kheight40,
-                    const ConfigurableTextFormField(
+                    const LoginFormTextFormField(
                       label: 'Email address',
                       hint: 'username@gmail.com',
                     ),
                     kheight20,
-                    const ConfigurableTextFormField(
+                    const LoginFormTextFormField(
                       label: 'password',
                       hint: 'As2@1hfl',
                       passField: true,
@@ -67,7 +67,7 @@ class UserLoginScreen extends StatelessWidget {
                       height: 50,
                       child: ElevatedButton(
                         onPressed: () {
-                          
+                          Navigator.of(context).pushNamed('home');
                         },
                         style: ElevatedButton.styleFrom(
                           primary: primary,
@@ -95,8 +95,8 @@ class UserLoginScreen extends StatelessWidget {
 
 ValueNotifier<bool> showPassword = ValueNotifier(false);
 
-class ConfigurableTextFormField extends StatelessWidget {
-  const ConfigurableTextFormField({
+class LoginFormTextFormField extends StatelessWidget {
+  const LoginFormTextFormField({
     Key? key,
     required this.label,
     required this.hint,

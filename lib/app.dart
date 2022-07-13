@@ -1,3 +1,4 @@
+import 'package:demo/presentation/pages/home/home_screen.dart';
 import 'package:demo/presentation/pages/login/user_login_screen.dart';
 import 'package:flutter/material.dart';
 
@@ -12,6 +13,9 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
       ),
       home: const UserLoginScreen(),
+      routes: {
+        'home':(context) => HomeScreen(),
+      },
     );
   }
 }
