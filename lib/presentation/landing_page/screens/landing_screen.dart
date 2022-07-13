@@ -1,7 +1,8 @@
 import 'package:demo/core/colors.dart';
-import 'package:demo/presentation/pages/animation_page/animation_screen.dart';
-import 'package:demo/presentation/pages/home/home_screen.dart';
-import 'package:demo/presentation/pages/settings/settings_screen.dart';
+import 'package:demo/presentation/animation_page/screens/animation_screen.dart';
+import 'package:demo/presentation/home/screens/home_screen.dart';
+import 'package:demo/presentation/landing_page/widgets/bottom_nav_item.dart';
+import 'package:demo/presentation/settings/screens/settings_screen.dart';
 import 'package:flutter/material.dart';
 
 class LandingScreen extends StatelessWidget {
@@ -38,12 +39,7 @@ class LandingScreen extends StatelessWidget {
 }
 
 ValueNotifier<int> navBarIndex = ValueNotifier(0);
-BottomNavigationBarItem bottomNavBarItem({required IconData icon, required String label}) {
-  return BottomNavigationBarItem(
-    icon: Icon(icon),
-    label: label,
-  );
-}
+
 
 List<Widget> pages = const [
   HomeScreen(),
