@@ -67,7 +67,7 @@ class UserLoginScreen extends StatelessWidget {
                       height: 50,
                       child: ElevatedButton(
                         onPressed: () {
-                          Navigator.of(context).pushNamed('home');
+                          Navigator.of(context).pushNamedAndRemoveUntil('main', (route) => false);
                         },
                         style: ElevatedButton.styleFrom(
                           primary: primary,

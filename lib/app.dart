@@ -1,4 +1,5 @@
-import 'package:demo/presentation/pages/home/home_screen.dart';
+import 'package:demo/core/colors.dart';
+import 'package:demo/presentation/pages/landing_page/landing_screen.dart';
 import 'package:demo/presentation/pages/login/user_login_screen.dart';
 import 'package:flutter/material.dart';
 
@@ -10,11 +11,13 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
+          primarySwatch: Colors.blue,
+          appBarTheme: const AppBarTheme(
+            backgroundColor: kBlack,
+          )),
       home: const UserLoginScreen(),
       routes: {
-        'home':(context) => HomeScreen(),
+        'main': (context) => const LandingScreen(),
       },
     );
   }
