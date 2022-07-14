@@ -51,58 +51,65 @@ class LoginScreenBottonSection extends StatelessWidget {
         child: Column(
           children: [
             const Expanded(
-              child:  ConfigurableText(
+              child: ConfigurableText(
                 text: 'Sign In',
               ),
             ),
             // kheight40,
-            LoginFormTextFormField(
-              validator: (value) {
-                return null;
-              },
-              label: 'Email address',
-              hint: 'username@gmail.com',
-            ),
-            kheight20,
-            LoginFormTextFormField(
-              validator: (value) {
-                return null;
-              },
-              label: 'password',
-              hint: 'As2@1hfl',
-              passField: true,
-            ),
-            kheight10,
-            Row(
-              mainAxisAlignment: MainAxisAlignment.end,
-              children: [
-                Text(
-                  'Forget Password?',
-                  style: GoogleFonts.poppins(),
-                ),
-              ],
-            ),
-            kheight20,
-            SizedBox(
-              width: dSize.width - 60,
-              height: 50,
-              child: ElevatedButton(
-                onPressed: () {
-                  Navigator.of(context).pushNamedAndRemoveUntil('main', (route) => false);
-                },
-                style: ElevatedButton.styleFrom(
-                  primary: primary,
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(8),
-                  ),
-                ),
-                child: const ConfigurableText(
-                  text: 'Sign In',
-                  color: kWhite,
-                  size: 15,
-                ),
-              ),
-            )
+            Expanded(
+                flex: 5,
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    LoginFormTextFormField(
+                      validator: (value) {
+                        return null;
+                      },
+                      label: 'Email address',
+                      hint: 'username@gmail.com',
+                    ),
+                    kheight10,
+                    LoginFormTextFormField(
+                      validator: (value) {
+                        return null;
+                      },
+                      label: 'password',
+                      hint: 'As2@1hfl',
+                      passField: true,
+                    ),
+                    kheight10,
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.end,
+                      children: [
+                        Text(
+                          'Forget Password?',
+                          style: GoogleFonts.poppins(),
+                        ),
+                      ],
+                    ),
+                    kheight10,
+                    SizedBox(
+                      width: dSize.width - 60,
+                      height: dSize.height*.07,
+                      child: ElevatedButton(
+                        onPressed: () {
+                          Navigator.of(context).pushNamedAndRemoveUntil('main', (route) => false);
+                        },
+                        style: ElevatedButton.styleFrom(
+                          primary: primary,
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(8),
+                          ),
+                        ),
+                        child: const ConfigurableText(
+                          text: 'Sign In',
+                          color: kWhite,
+                          size: 15,
+                        ),
+                      ),
+                    )
+                  ],
+                ))
           ],
         ),
       ),
