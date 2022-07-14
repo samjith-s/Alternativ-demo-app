@@ -12,8 +12,7 @@ class UserLoginScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     Size dSize = MediaQuery.of(context).size;
     return Scaffold(
-      body: SizedBox(
-        height: dSize.height,
+      body: SizedBox.expand(
         child: Stack(
           children: const [
             LoginScreenTopSection(),
@@ -51,10 +50,12 @@ class LoginScreenBottonSection extends StatelessWidget {
         ),
         child: Column(
           children: [
-            const ConfigurableText(
-              text: 'Sign In',
+            const Expanded(
+              child:  ConfigurableText(
+                text: 'Sign In',
+              ),
             ),
-            kheight40,
+            // kheight40,
             LoginFormTextFormField(
               validator: (value) {
                 return null;

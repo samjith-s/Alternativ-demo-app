@@ -14,7 +14,10 @@ class LandingScreen extends StatelessWidget {
       valueListenable: navBarIndex,
       builder: (BuildContext context, int selectedIndex, Widget? child) {
         return Scaffold(
-          appBar: AppBar(),
+          appBar: AppBar(
+            title: Text(titles[selectedIndex]),
+            centerTitle: true,
+          ),
           body: pages[selectedIndex],
           bottomNavigationBar: BottomNavigationBar(
             items: <BottomNavigationBarItem>[
@@ -40,9 +43,9 @@ class LandingScreen extends StatelessWidget {
 
 ValueNotifier<int> navBarIndex = ValueNotifier(0);
 
-
 List<Widget> pages = const [
   HomeScreen(),
   AnimationScreen(),
   SettingScreen(),
 ];
+List<String> titles = const ["Home", "Actions", "Settings"];
