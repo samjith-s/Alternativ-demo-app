@@ -8,7 +8,7 @@ import 'package:google_fonts/google_fonts.dart';
 class SettingsTileWidget extends StatelessWidget {
   const SettingsTileWidget({
     Key? key,
-    this.trailing = const Icon(Icons.keyboard_arrow_right, color: kBlack),
+    this.trailing =const  Icon(Icons.keyboard_arrow_right),
     required this.title,
     required this.icon,
     required this.dSize,
@@ -37,7 +37,8 @@ class SettingsTileWidget extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               CircleAvatar(
-                backgroundColor: Colors.primaries[Random().nextInt(Colors.primaries.length)],
+                backgroundColor:
+                    Colors.primaries[Random().nextInt(Colors.primaries.length)],
                 child: Icon(
                   icon,
                   color: kWhite,
@@ -50,10 +51,7 @@ class SettingsTileWidget extends StatelessWidget {
                   children: [
                     Text(
                       title,
-                      style: GoogleFonts.poppins(
-                        fontSize: 15,
-                        color: kBlack,
-                      ),
+                      style: Theme.of(context).textTheme.displayMedium,
                     ),
                     trailing,
                   ],

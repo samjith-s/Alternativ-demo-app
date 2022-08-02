@@ -32,6 +32,7 @@ class SettingScreen extends StatelessWidget {
               title: 'Notification',
               trailing: SwitchWidget(
                 onChanged: _onSwitchChange,
+                valueListenable: isNotificationON,
               ),
               onTap: () {},
             ),
@@ -66,7 +67,7 @@ class SettingScreen extends StatelessWidget {
   }
 
   void _onSwitchChange(value) {
-    isSwichON.value = value;
+    isNotificationON.value = value;
     //todo
   }
 

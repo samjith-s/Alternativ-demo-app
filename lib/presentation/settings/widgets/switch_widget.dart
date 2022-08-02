@@ -2,12 +2,13 @@ import 'package:demo/core/colors.dart';
 import 'package:flutter/material.dart';
 
 class SwitchWidget extends StatelessWidget {
-  const SwitchWidget({Key? key, required this.onChanged}) : super(key: key);
+  const SwitchWidget({Key? key, required this.onChanged,required this.valueListenable}) : super(key: key);
   final void Function(bool) onChanged;
+  final ValueNotifier<bool> valueListenable;
   @override
   Widget build(BuildContext context) {
     return ValueListenableBuilder(
-      valueListenable: isSwichON,
+      valueListenable: valueListenable,
       builder: (BuildContext context, bool value, Widget? child) {
         return SizedBox(
           width: 30,
@@ -24,4 +25,4 @@ class SwitchWidget extends StatelessWidget {
   }
 }
 
-ValueNotifier<bool> isSwichON = ValueNotifier(true);
+ValueNotifier<bool> isNotificationON = ValueNotifier(true);

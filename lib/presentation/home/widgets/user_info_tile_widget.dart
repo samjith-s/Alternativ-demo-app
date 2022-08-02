@@ -22,7 +22,7 @@ class UserInfoTileWidget extends StatelessWidget {
     return Container(
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(10),
-        color: kBlack.withOpacity(.2),
+        color: Theme.of(context).cardColor,
       ),
       padding: const EdgeInsets.symmetric(horizontal: 10),
       width: dSize.width,
@@ -56,11 +56,7 @@ class UserInfoTileWidget extends StatelessWidget {
                     children: [
                       Text(
                         username,
-                        style: GoogleFonts.poppins(
-                          fontSize: 13,
-                          color: kBlack,
-                          fontWeight: FontWeight.w600,
-                        ),
+                        style: Theme.of(context).textTheme.titleMedium,
                       ),
                     ],
                   ),
@@ -70,10 +66,7 @@ class UserInfoTileWidget extends StatelessWidget {
                     children: [
                       Text(
                         email,
-                        style: GoogleFonts.nunito(
-                          fontSize: 12,
-                          color: const Color.fromARGB(255, 42, 42, 42),
-                        ),
+                        style: Theme.of(context).textTheme.titleSmall,
                         maxLines: 1,
                         overflow: TextOverflow.ellipsis,
                       ),
