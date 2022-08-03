@@ -14,90 +14,94 @@ class AppTheme extends ChangeNotifier {
   }
 
   static final ThemeData _darkTheme = ThemeData(
-      scaffoldBackgroundColor: Colors.black,
-      appBarTheme:  AppBarTheme(
-        color: kWhite.withOpacity(.2),
-        iconTheme:const IconThemeData(
-          color: Colors.white,
-        ),
-      ),
-      colorScheme: const ColorScheme.dark(
-        primary: Colors.black,
-        onPrimary: Colors.black,
-        secondary: Colors.red,
-      ),
-      cardTheme: const CardTheme(
-        color: Colors.black,
-      ),
+    scaffoldBackgroundColor: Colors.black,
+    appBarTheme: AppBarTheme(
+      color: kWhite.withOpacity(.2),
       iconTheme: const IconThemeData(
-        color: Colors.white54,
+        color: Colors.white,
       ),
-      cardColor: kWhite.withOpacity(.2),
-      textTheme: TextTheme(
-        displayMedium: GoogleFonts.poppins(
-          fontSize: 15,
-          color: kWhite,
-        ),
-        displaySmall: TextStyle(color: Colors.white),
-        titleMedium: GoogleFonts.poppins(
-          fontSize: 13,
-          color: kWhite,
-          fontWeight: FontWeight.w600,
-        ),
-        titleSmall: GoogleFonts.nunito(
-          fontSize: 12,
-          color: const Color.fromARGB(255, 121, 121, 122),
-        ),
+      titleTextStyle: const TextStyle(
+        color: kWhite,
+        fontWeight: FontWeight.bold,
       ),
-      bottomNavigationBarTheme:  BottomNavigationBarThemeData(
-        backgroundColor: kWhite.withOpacity(.2),
-        selectedItemColor: kWhite,
-        unselectedItemColor: Colors.grey,
-      ));
+    ),
+    colorScheme: const ColorScheme.dark(
+      primary: Colors.black,
+      onPrimary: Colors.black,
+      secondary: Colors.red,
+    ),
+    iconTheme: const IconThemeData(
+      color: Colors.white54,
+    ),
+    cardColor: kWhite.withOpacity(.2),
+    textTheme: TextTheme(
+      displayMedium: GoogleFonts.poppins(
+        fontSize: 15,
+        color: kWhite,
+      ),
+      displaySmall: TextStyle(color: Colors.white),
+      titleMedium: GoogleFonts.poppins(
+        fontSize: 13,
+        color: kWhite,
+        fontWeight: FontWeight.w600,
+      ),
+      titleSmall: GoogleFonts.nunito(
+        fontSize: 12,
+        color: const Color.fromARGB(255, 121, 121, 122),
+      ),
+    ),
+    bottomNavigationBarTheme: BottomNavigationBarThemeData(
+      backgroundColor: kWhite.withOpacity(.2),
+      selectedItemColor: kWhite,
+      unselectedItemColor: Colors.grey,
+    ),
+  );
 
   static ThemeData get darkTheme => _darkTheme;
 
   static final ThemeData _lightTheme = ThemeData(
-      scaffoldBackgroundColor: Colors.teal,
-      appBarTheme: const AppBarTheme(
-        color: Colors.teal,
-        iconTheme: IconThemeData(
-          color: Colors.black,
-        ),
+    scaffoldBackgroundColor: Colors.teal,
+    appBarTheme: const AppBarTheme(
+      color: Colors.teal,
+      iconTheme: IconThemeData(
+        color: Colors.black,
       ),
-      colorScheme: const ColorScheme.light(
-        primary: Colors.white,
-        onPrimary: Colors.white,
-        secondary: Colors.red,
+      titleTextStyle: TextStyle(
+        color: kBlack,
+        fontWeight: FontWeight.bold,
       ),
-      cardTheme: const CardTheme(
-        color: Colors.teal,
+    ),
+    colorScheme: const ColorScheme.light(
+      primary: Colors.white,
+      onPrimary: Colors.white,
+      secondary: Colors.red,
+    ),
+    cardColor: kBlack.withOpacity(.2),
+    iconTheme: const IconThemeData(
+      color: Colors.white54,
+    ),
+    textTheme: TextTheme(
+      displayMedium: GoogleFonts.poppins(
+        fontSize: 15,
+        color: kBlack,
       ),
-      cardColor: kBlack.withOpacity(.2),
-      iconTheme: const IconThemeData(
-        color: Colors.white54,
+      displaySmall: const TextStyle(color: Colors.black),
+      titleMedium: GoogleFonts.poppins(
+        fontSize: 13,
+        color: kBlack,
+        fontWeight: FontWeight.w600,
       ),
-      textTheme: TextTheme(
-        displayMedium: GoogleFonts.poppins(
-          fontSize: 15,
-          color: kBlack,
-        ),
-        displaySmall: TextStyle(color: Colors.black),
-        titleMedium: GoogleFonts.poppins(
-          fontSize: 13,
-          color: kBlack,
-          fontWeight: FontWeight.w600,
-        ),
-        titleSmall: GoogleFonts.nunito(
-          fontSize: 12,
-          color: const Color.fromARGB(255, 42, 42, 42),
-        ),
+      titleSmall: GoogleFonts.nunito(
+        fontSize: 12,
+        color: const Color.fromARGB(255, 42, 42, 42),
       ),
-      bottomNavigationBarTheme: const BottomNavigationBarThemeData(
-        backgroundColor: kBlack,
-        selectedItemColor: kWhite,
-        unselectedItemColor: Colors.grey,
-      ));
+    ),
+    bottomNavigationBarTheme: const BottomNavigationBarThemeData(
+      backgroundColor: kBlack,
+      selectedItemColor: kWhite,
+      unselectedItemColor: Colors.grey,
+    ),
+  );
 
   static ThemeData get lightTheme => _lightTheme;
 }
